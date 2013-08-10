@@ -34,7 +34,7 @@ for i in range(len(alreadyMessaged)):
 alreadyMessaged.append('DinosSayRoar') # don't reply to myself
 
 # perform the search
-results = api.GetSearch('dinosaurs', since_id=lastid)
+results = api.GetSearch('dinosaurs extinct wish', since_id=lastid)
 #print 'Found %s results.' % (len(results))
 if len(results) == 0:
     #print 'Nothing to reply to. Quitting.'
