@@ -45,8 +45,8 @@ if len(results) == 0:
     print 'Nothing to reply to. Quitting.'
     sys.exit()
 repliedTo = []
-if len(results) > (len(statuses) * len(ment)):
-    results = random.sample(results, (len(statuses) * len(ment)))
+if len(results) > (len(statuses) * 2):
+    results = random.sample(results, (len(statuses) * 2))
 
 
 
