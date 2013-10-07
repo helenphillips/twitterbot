@@ -2,10 +2,10 @@ import twitter, os, time, sys, random
 from random import randint
 
 
-api=twitter.Api(consumer_key ='',
-consumer_secret='',
-access_token_key= '',
-access_token_secret='')
+api=twitter.Api(consumer_key ='9IN0n0Pntg4j1lSKtBsg',
+consumer_secret='0vJD3HIjOlWTxYyhTllTD7jJVzjLDuGGweT86IpCc',
+access_token_key= '1641029820-RcvTwOLJijxMm1EvAK5Euzib13OPFcgHcWowVuu',
+access_token_secret='urS6efhqA0dMPFECDhhR5BOx5Z4IDb8pvFHvirXUSAQ')
 
 
 LATESTFILE = 'dinosays_latest.txt'
@@ -62,7 +62,7 @@ for statusObj in results:
         try:
             print 'Posting in reply to @%s: %s' % (statusObj.user.screen_name.encode('ascii', 'replace'), statusObj.text.encode('ascii', 'replace'))
             api.PostUpdate('@%s' % (statusObj.user.screen_name) + statuses[randint(1, len(statuses))] , in_reply_to_status_id=statusObj.id)
-            repliedTo.append( (statusObj.id, statusObj.user.screen_name, statusObj.text.encode('ascii', 'replace')) )
+            repliedTo.append( (statusObj.id, statusObj.user.screen_name, statusObj.text.encode('ascii', 'replace').replace('\n','').replace('\r','') )
             time.sleep(1)
         except Exception:
             print "Unexpected error:", sys.exc_info()[0:2]
