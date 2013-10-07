@@ -1,12 +1,7 @@
 import twitter, os, time, sys, random
 from random import randint
 
-
-api=twitter.Api(consumer_key ='',
-consumer_secret='',
-access_token_key= '',
-access_token_secret='')
-
+import twitterlogon.py
 
 LATESTFILE = 'dinosays_latest.txt'
 LOGFILE = 'dinosays_log.txt'
