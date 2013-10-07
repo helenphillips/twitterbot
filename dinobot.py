@@ -62,7 +62,7 @@ for statusObj in results:
         try:
             print 'Posting in reply to @%s: %s' % (statusObj.user.screen_name.encode('ascii', 'replace'), statusObj.text.encode('ascii', 'replace'))
             api.PostUpdate('@%s' % (statusObj.user.screen_name) + statuses[randint(1, len(statuses))] , in_reply_to_status_id=statusObj.id)
-            repliedTo.append( (statusObj.id, statusObj.user.screen_name, statusObj.text.encode('ascii', 'replace').replace('\n','').replace('\r','') )
+            repliedTo.append( (statusObj.id, statusObj.user.screen_name, statusObj.text.encode('ascii', 'replace').replace('\n','').replace('\r','') ))
             time.sleep(1)
         except Exception:
             print "Unexpected error:", sys.exc_info()[0:2]
