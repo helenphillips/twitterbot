@@ -2,10 +2,10 @@ import twitter, os, time, sys, random
 from random import randint
 
 
-api=twitter.Api(consumer_key ='9IN0n0Pntg4j1lSKtBsg',
-consumer_secret='0vJD3HIjOlWTxYyhTllTD7jJVzjLDuGGweT86IpCc',
-access_token_key= '1641029820-RcvTwOLJijxMm1EvAK5Euzib13OPFcgHcWowVuu',
-access_token_secret='urS6efhqA0dMPFECDhhR5BOx5Z4IDb8pvFHvirXUSAQ')
+api=twitter.Api(consumer_key ='',
+consumer_secret='',
+access_token_key= '',
+access_token_secret='')
 
 
 LATESTFILE = 'dinosays_latest.txt'
